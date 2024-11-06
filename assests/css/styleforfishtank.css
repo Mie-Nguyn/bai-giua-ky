@@ -1,0 +1,180 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: url("../img/ho_ca.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.fish-tank {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.fish-tank img {
+    position: absolute;
+    height: 100px;
+}
+
+.fish1 {
+    top: 100px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    animation-name: Shark;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay:0s;
+    animation-play-state: running;
+}
+@keyframes Shark {
+    0% {left: 100px; top: 400px;}
+    20% {left: 300px; top: 400px;}    
+    40% {left: 500px; top: 300px;}    
+    50% {left: 600px; top: 50px;}    
+    60% {left: 600px; top: 100px;}    
+    80% {left: 500px; top: 200px;}    
+    100% {left: 100px; top: 400px; transform: scale(-1,1);}  
+}
+
+
+.fish2 {
+    top: 100px;
+    left: 200px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    animation-name: Faint;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode:forwards;
+    animation-delay: 0s;
+    animation-play-state: running;
+}
+@keyframes Faint {
+    0% {transform: translateX(0) scale(1);}
+    20% {transform: translateX(200px) scale(1);}
+    40% {transform: translateX(1200px) scale(1);}
+    41% {transform: translateX(1200px) scale(-1);}
+    50% {transform: translateX(900px) scale(-1);}
+    70% {transform: translateX(600px) scale(-1);}
+    80% {left: -33px; transform: scale(-1);}
+    81% {transform: scale(1);}
+    
+}
+
+.fish3 {
+    bottom: 100px;
+    right: 200px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    animation-name: goldfish;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode:forwards;
+    animation-delay: 0s;
+    animation-play-state: running;
+}
+
+@keyframes goldfish {
+    0% {transform: translateX(0px) scale(1);}
+    20% {transform: translate(-200px,100px) scale(1);}
+    30% {transform: translate(-300px,-200px) scale(1);}
+    31% {transform: translate(-300px,-200px) scale(-1);}
+    40% {transform:translateY(-500px) scale(-1);}
+    41% {transform:translateY(-500px)  scale(-1);}
+    50% {transform: translateX(200px) scale(-1);}
+    51% {transform: translateX(200px) scale(1);}
+    100% {transform: translateX(0px) scale(1);}
+}
+
+.diver1 {
+    bottom: 200px;
+    right: 300px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    animation-name: di1;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode:forwards;
+    animation-delay: 0s;
+    animation-play-state: running;
+}
+@keyframes di1 {
+    0% {transform: translateY(-100px) scale(1,1);}
+    50% {transform: translateY(-400px) scale(1,1);}
+    51% {transform: translateY(-400px) scale(-1,1);}
+    70% {transform: translateY(250px) scale(-1,1);}
+    71% {transform: translateY(250px) scale(1,1);}
+    100% {transform: translateY(-100px) scale(1,1);}
+}
+
+.diver2 {
+    bottom: 200px;
+    left: 200px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    animation-name: di2;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode:forwards;
+    animation-delay: 0s;
+    animation-play-state: running;
+}
+
+@keyframes di2 {
+    0% {transform: translateY(-100px) scale(1,1);}
+    50% {transform: translateY(-400px) scale(1,1);}
+    51% {transform: translateY(-400px) scale(-1,1);}
+    70% {transform: translateY(250px) scale(-1,1);}
+    71% {transform: translateY(250px) scale(1,1);}
+    100% {transform: translateY(-100px) scale(1,1);}
+}
+
+.bubble-controller {
+    position: fixed;        
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.bubble-controller img {
+    height: 100px;
+    position: absolute;
+}
+
+.bubble1 {
+    left: 16%;
+    animation: bubblewater 4s infinite linear;
+}
+.bubble2 {
+    left: 48%;
+    animation: bubblewater 4s infinite linear;
+}
+.bubble3 {
+    left: 80%;
+    animation: bubblewater 4s infinite linear;
+}
+
+@keyframes bubblewater {
+    0% {top: 140%;}
+    40% {opacity: 1;}
+    100% {top: 20%; opacity: 0;}
+}
